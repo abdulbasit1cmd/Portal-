@@ -107,6 +107,14 @@ app.get('/dashboard', requireAuth, (req, res) => {
   res.redirect(destination);
 });
 
+app.get('/admin', requireAdmin, (req, res) => {
+  res.redirect('/admin/dashboard');
+});
+
+app.get('/admin/', requireAdmin, (req, res) => {
+  res.redirect('/admin/dashboard');
+});
+
 app.get('/admin/dashboard', requireAdmin, async (req, res) => {
   const [studentCount, userCount] = await Promise.all([countStudents(), countUsers()]);
 
