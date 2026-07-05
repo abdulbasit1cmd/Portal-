@@ -1,0 +1,36 @@
+{
+  "name": "portal-",
+  "version": "1.0.0",
+  "description": "This project is a full-stack Student Information Management System designed for a school or tertiary institution. It will be implemented using Node.js, Express.js, MongoDB, HTML, CSS, and JavaScript.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"No automated tests configured yet\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abdulbasit1cmd/Portal-.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/abdulbasit1cmd/Portal-/issues"
+  },
+  "homepage": "https://github.com/abdulbasit1cmd/Portal-#readme",
+  "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "connect-mongo": "^6.0.0",
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.6",
+    "dotenv": "^17.4.2",
+    "ejs": "^6.0.1",
+    "express": "^5.2.1",
+    "express-session": "^1.19.0",
+    "helmet": "^8.2.0",
+    "mongoose": "^9.7.3",
+    "morgan": "^1.11.0",
+    "multer": "^2.2.0"
+  }
+}

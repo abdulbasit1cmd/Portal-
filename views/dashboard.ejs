@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= pageTitle %> - Student Portal</title>
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <main>
+      <nav>
+        <strong><%= siteName %></strong>
+        <div>
+          <span>Welcome, <%= user.name %></span>
+          <a href="/admin/students">Students</a>
+          <a href="/logout">Logout</a>
+        </div>
+      </nav>
+
+      <section class="card">
+        <h1><%= pageTitle %></h1>
+        <p>Manage students and oversee the portal from one place.</p>
+
+        <div class="grid">
+          <div class="panel">
+            <h3>Total Students</h3>
+            <p><%= studentCount %></p>
+          </div>
+          <div class="panel">
+            <h3>Total Users</h3>
+            <p><%= userCount %></p>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

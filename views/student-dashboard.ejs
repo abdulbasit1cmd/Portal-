@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Dashboard - Student Portal</title>
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <main>
+      <nav>
+        <strong><%= siteName %></strong>
+        <div>
+          <span>Welcome, <%= user.name %></span>
+          <a href="/student/profile">Profile</a>
+          <a href="/logout">Logout</a>
+        </div>
+      </nav>
+
+      <section class="card">
+        <h1>Student Dashboard</h1>
+        <p>View your personal details and keep track of your studies.</p>
+        <div class="panel">
+          <h3>Profile Summary</h3>
+          <p><strong>Name:</strong> <%= student.name %></p>
+          <p><strong>Matric Number:</strong> <%= student.matricNumber %></p>
+          <p><strong>Department:</strong> <%= student.department %></p>
+          <p><strong>Programme:</strong> <%= student.programme %></p>
+          <p><strong>Status:</strong> <%= student.status %></p>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

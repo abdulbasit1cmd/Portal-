@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Form - Student Portal</title>
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <main>
+      <nav>
+        <strong><%= siteName %></strong>
+        <div>
+          <span>Welcome, <%= user.name %></span>
+          <a href="/admin/students">Back</a>
+          <a href="/logout">Logout</a>
+        </div>
+      </nav>
+
+      <section class="card">
+        <h1><%= student ? 'Edit Student' : 'Add Student' %></h1>
+        <form method="post" action="<%= action %>">
+          <label>Name</label>
+          <input name="name" value="<%= student ? student.name : '' %>" required />
+
+          <label>Email</label>
+          <input name="email" type="email" value="<%= student ? student.email : '' %>" required />
+
+          <label>Matric Number</label>
+          <input name="matricNumber" value="<%= student ? student.matricNumber : '' %>" required />
+
+          <label>Department</label>
+          <input name="department" value="<%= student ? student.department : '' %>" />
+
+          <label>Programme</label>
+          <input name="programme" value="<%= student ? student.programme : '' %>" />
+
+          <label>Phone</label>
+          <input name="phone" value="<%= student ? student.phone : '' %>" />
+
+          <label>Address</label>
+          <textarea name="address"><%= student ? student.address : '' %></textarea>
+
+          <label>Password</label>
+          <input name="password" type="password" placeholder="Leave blank to keep current password" />
+
+          <button class="button" type="submit">Save Student</button>
+        </form>
+      </section>
+    </main>
+  </body>
+</html>

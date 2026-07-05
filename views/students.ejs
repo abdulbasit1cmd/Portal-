@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Students - Student Portal</title>
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <main>
+      <nav>
+        <strong><%= siteName %></strong>
+        <div>
+          <span>Welcome, <%= user.name %></span>
+          <a href="/admin/dashboard">Dashboard</a>
+          <a href="/logout">Logout</a>
+        </div>
+      </nav>
+
+      <section class="card">
+        <div class="actions">
+          <h1>Student Records</h1>
+          <a class="button" href="/admin/students/new">Add Student</a>
+        </div>
+        <table>
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Matric</th>
+              <th>Department</th>
+              <th>Programme</th>
+              <th>Status</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% students.forEach((student) => { %>
+              <tr>
+                <td><%= student.name %></td>
+                <td><%= student.matricNumber %></td>
+                <td><%= student.department %></td>
+                <td><%= student.programme %></td>
+                <td><%= student.status %></td>
+                <td>
+                  <a href="/admin/students/<%= student.id %>/edit">Edit</a>
+                  <form method="post" action="/admin/students/<%= student.id %>/delete" style="display:inline">
+                    <button class="button secondary" type="submit">Delete</button>
+                  </form>
+                </td>
+              </tr>
+            <% }) %>
+          </tbody>
+        </table>
+      </section>
+    </main>
+  </body>
+</html>

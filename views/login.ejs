@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login - Student Portal</title>
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <main class="auth-shell">
+      <section class="card auth-card">
+        <h1>Welcome back</h1>
+        <p>Use your email or student matric number to sign in.</p>
+        <% if (error) { %>
+          <div class="alert"><%= error %></div>
+        <% } %>
+        <form method="post" action="/login">
+          <label for="identifier">Email or Matric Number</label>
+          <input id="identifier" name="identifier" required />
+
+          <label for="password">Password</label>
+          <input id="password" name="password" type="password" required />
+
+          <button class="button" type="submit">Login</button>
+        </form>
+        <p class="hint">Demo credentials: admin@portal.com / Admin@123 or amina@portal.com / Student@123</p>
+      </section>
+    </main>
+  </body>
+</html>
